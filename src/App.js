@@ -6,16 +6,21 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="p-6">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+    
+      <div className="flex flex-col min-h-scree">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <footer className="py-6 text-center text-black-800 border-t bg-blue-600">
+          {new Date().getFullYear()} SOFTWARE COMPANY. All rights reserved
+        </footer>
       </div>
-    </>
+   
   );
 }
 
